@@ -1,0 +1,25 @@
+name: test
+version: 0.1.0
+
+authors:
+  - Drew Harris <drewbharris@gmail.com>
+
+targets:
+  test:
+    main: src/test.cr
+
+crystal: 0.24.1
+
+license: MIT
+
+dependencies:
+  kemal:
+    github: kemalcr/kemal
+
+dependencies:
+  crinja:
+    github: straight-shoota/crinja
+
+development_dependencies:
+  sentry-run:
+    github: faustinoaq/sentry-run

@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>grmnygrmny</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <div class="body-container">
+
+        <div class="navbar navbar-inverse navbar-custom navbar-fixed-top">
+            <div class="navbar-inner navbar-custom">
+                <div class="navbar-container">
+
+                <a class="brand" href="/">grmnygrmny</a>
+
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+
+                <div class="nav-collapse collapse">
+                    <ul class="nav">
+                        <li class="divider-vertical"></li>
+                        <li class="nav-button {% if page == 'releases' %}active{% endif %}" id="releases-button"><a href="/">releases</a></li>
+                        <li class="nav-button {% if page == 'about' %}active{% endif %}" id="about-button"><a href="/about">about</a></li>
+                        <li class="divider-vertical"></li>
+                    </ul>
+                    <ul class="nav pull-right">
+                        <li class="divider-vertical"></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">links<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-button"><a href="http://facebook.com/grmnygrmny">facebook</a></li>
+                                <li class="nav-button"><a href="http://twitter.com/grmnygrmny">twitter</a></li>
+                                <li class="nav-button"><a href="http://grmnygrmny.bandcamp.com">bandcamp</a></li>
+                                <li class="nav-button"><a href="http://soundcloud.com/germanygermany">soundcloud</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-button">
+                            <a href="mailto:contact@grmnygrmny.com">contact</a>
+                        </li>
+                        <li class="divider-vertical"></li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel slide">
+            <div class="carousel-inner">
+                <div class="item active">
+                <img src="img/header-square.png" alt="">
+                <div class="container">
+                <div class="carousel-caption">
+                </div> 
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container marketing">
+            <div class="content-heading">
+                <h1 id="content-title"></h1>
+            </div>
+
+            <div id="content">
+                {% if page == 'about' %}
+                    {% include 'about.html.j2' %}
+                {% else if page == 'releases' %}
+                    {% include 'releases.html.j2' %}
+                {% endif %}
+            </div>
+
+            <footer>
+                <p class="pull-right"><a href="#">Back to top</a></p>
+                <p>&copy; Germany Germany &middot; <a href="mailto:contact@grmnygrmny.com">Contact</a></p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+
+    </body>
+</html>
